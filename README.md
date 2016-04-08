@@ -26,7 +26,7 @@ This will help your run opsworks-cookbooks locally using Chef+Kitchen+Vagrant
 
 ## KNOWN BUGS
 ----------
-The first time you run _$ chef exec kitchen setup_, you will encounter errors saying:
+The first time you run `$ chef exec kitchen setup`, you will encounter errors saying:
 
 >Running handlers:
 [2016-04-08T17:08:34+00:00] ERROR: Running exception handlers
