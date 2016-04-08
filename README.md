@@ -2,20 +2,20 @@
 
 This will help your run opsworks-cookbooks locally using Chef+Kitchen+Vagrant
 
-### To Test
--------
+### To Test, run these commands
+--------------------------------
 
-`$ git clone https://github.com/elitechance/opsworks-cookbooks-wrapper.git`
+`git clone https://github.com/elitechance/opsworks-cookbooks-wrapper.git`
 
-`$ git clone https://github.com/aws/opsworks-cookbooks.git`
+`git clone https://github.com/aws/opsworks-cookbooks.git`
 
-`$ cd opsworks-cookbooks-wrapper`
+`cd opsworks-cookbooks-wrapper`
 
-`$ cp .kitchen.sample.yml .kitchen.yml`
+`cp .kitchen.sample.yml .kitchen.yml`
 
-`$ cp Berksfile.sample Berksfile`
+`cp Berksfile.sample Berksfile`
 
-`$ cp metadata.sample.rb metadata.rb`
+`cp metadata.sample.rb metadata.rb`
 
 ### This will simulate OpsWorks NodeJs Setup Recipes
 `$ chef exec kitchen setup`
