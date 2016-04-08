@@ -12,14 +12,14 @@ $ cp .kitchen.sample.yml .kitchen.yml
 $ cp Berksfile.sample Berksfile
 $ cp metadata.sample.rb metadata.rb
 
-# This will simulate OpsWorks NodeJs Setup Recipes
+# This will simulate OpsWorks NodeJs Setup Recipes-H4
 $ chef exec kitchen setup
 
 
-# Tested In
+# Tested In-H4
 Ubuntu 14.04
 
-KNOWN BUGS
+KNOWN BUGS-H3
 ----------
 The first time you run _$ chef exec kitchen setup_, you will encounter errors saying:
 
