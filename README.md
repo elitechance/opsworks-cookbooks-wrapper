@@ -1,8 +1,8 @@
-# opsworks-cookbooks-wrapper
+## opsworks-cookbooks-wrapper
 
 This will help your run opsworks-cookbooks locally using Chef+Kitchen+Vagrant
 
-To Test
+### To Test
 -------
 
 $ git clone https://github.com/elitechance/opsworks-cookbooks-wrapper.git
@@ -12,14 +12,14 @@ $ cp .kitchen.sample.yml .kitchen.yml
 $ cp Berksfile.sample Berksfile
 $ cp metadata.sample.rb metadata.rb
 
-# This will simulate OpsWorks NodeJs Setup Recipes-H4
+### This will simulate OpsWorks NodeJs Setup Recipes
 $ chef exec kitchen setup
 
 
-# Tested In-H4
+### Tested In
 Ubuntu 14.04
 
-KNOWN BUGS-H3
+## KNOWN BUGS
 ----------
 The first time you run _$ chef exec kitchen setup_, you will encounter errors saying:
 
