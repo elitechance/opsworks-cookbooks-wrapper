@@ -2,7 +2,7 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-cookbook 'deploy', git: '../opsworks-cookbooks/deploy'
+cookbook 'deploy', path: '../opsworks-cookbooks/deploy'
 cookbook 'mod_php5_apache2', path: '../opsworks-cookbooks/mod_php5_apache2'
 cookbook 'apache2', path: '../opsworks-cookbooks/apache2'
 cookbook 'dependencies', path: '../opsworks-cookbooks/dependencies'

@@ -7,7 +7,7 @@ To Test
 
 $ git clone https://github.com/elitechance/opsworks-cookbooks-wrapper.git
 $ git clone https://github.com/aws/opsworks-cookbooks.git
-$ cd opsworks-cookbook-wrapper
+$ cd opsworks-cookbooks-wrapper
 $ cp .kitchen.sample.yml .kitchen.yml
 $ cp Berksfile.sample Berksfile
 $ cp metadata.sample.rb metadata.rb
