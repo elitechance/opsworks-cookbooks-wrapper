@@ -1,0 +1,169 @@
+{
+  "default_attributes": {
+    "ssh_users": {
+    },
+    "deploy": {
+      "sample_nodejs_app": {
+        "application": "sample_nodejs_app",
+        "application_type": "nodejs",
+        "environment": {
+          "PORT": "80"
+        },
+        "environment_variables": {
+          "PORT": "80"
+        },
+        "auto_bundle_on_deploy": true,
+        "deploy_to": "/srv/www/sample_nodejs_app",
+        "document_root": null,
+        "domains": [
+          "sample_nodejs_app"
+        ],
+        "migrate": false,
+        "mounted_at": null,
+        "rails_env": null,
+        "restart_command": "echo 'restarting app'",
+        "sleep_before_restart": 0,
+        "ssl_support": false,
+        "ssl_certificate": null,
+        "ssl_certificate_key": null,
+        "ssl_certificate_ca": null,
+        "scm": {
+        },
+        "symlink_before_migrate": {
+        },
+        "symlinks": {
+        },
+        "database": {
+        },
+        "memcached": {
+          "host": null,
+          "port": 11211
+        }
+      }
+    },
+    "opsworks": {
+      "activity": "deploy",
+      "agent_version": "3433-20160227053027",
+      "valid_client_activities": [
+        "reboot",
+        "stop",
+        "deploy",
+        "grant_remote_access",
+        "revoke_remote_access",
+        "update_agent",
+        "setup",
+        "configure",
+        "update_dependencies",
+        "install_dependencies",
+        "update_custom_cookbooks",
+        "execute_recipes",
+        "sync_remote_users"
+      ],
+      "sent_at": 1458330812,
+      "deployment": "asdfasdf-63d5-49f6-acc2-asdfsadsfd",
+      "layers": {
+        "phoenix_layer": {
+          "name": "Sample Layer",
+          "id": "asdfasdf-7f1e-45af-89bc-asdfasdf",
+          "elb-load-balancers": [
+          ],
+          "instances": {
+            "phoenix-layer1": {
+              "public_dns_name": "ec2-sample.compute-1.amazonaws.com",
+              "private_dns_name": "ip-sample-127-0-0-0.ec2.internal",
+              "backends": 5,
+              "ip": "0.0.0.0",
+              "private_ip": "127.0.0.1",
+              "instance_type": "m1.small",
+              "status": "online",
+              "id": "asdfasdf-8d1f-4bc4-9d72-asdfasdf",
+              "aws_instance_id": "i-asdfsadf",
+              "elastic_ip": null,
+              "created_at": "2016-03-18T18:07:51+00:00",
+              "booted_at": "2016-03-18T18:08:39+00:00",
+              "region": "us-east-1",
+              "availability_zone": "us-east-1a",
+              "infrastructure_class": "ec2"
+            }
+          }
+        }
+      },
+      "applications": [
+        {
+          "name": "Sample NodeJs App",
+          "slug_name": "sample_nodejs_app",
+          "application_type": "nodejs"
+        }
+      ],
+      "stack": {
+        "name": "Sample NodeJS App Stack",
+        "id": "asdfasdf-1bc3-4e8a-b312-asdfsadf",
+        "vpc_id": null,
+        "elb-load-balancers": [
+          {
+            "name": "phoenix-test-lb",
+            "dns_name": "sample-loadbalances-us-east-1.elb.amazonaws.com",
+            "layer_id": "asdfasdf-7f1e-45af-89bc-asdfasdf"
+          }
+        ],
+        "rds_instances": [
+        ]
+      },
+      "instance": {
+        "id": "asdfasdf-8d1f-4bc4-9d72-asdfsdaf",
+        "hostname": "phoenix-layer1",
+        "instance_type": "m1.small",
+        "public_dns_name": "ec2-0-0-0-0.compute-1.amazonaws.com",
+        "private_dns_name": "ip-127-0-0-1.ec2.internal",
+        "ip": "0.0.0.0",
+        "private_ip": "127.0.0.1",
+        "architecture": "x86_64",
+        "layers": [
+          "sample_nodejs_app_layer"
+        ],
+        "backends": 5,
+        "aws_instance_id": "i-asdfasdf",
+        "region": "us-east-1",
+        "availability_zone": "us-east-1a",
+        "subnet_id": null,
+        "infrastructure_class": "ec2"
+      },
+      "ruby_version": "2.0.0",
+      "ruby_stack": "ruby",
+      "rails_stack": {
+        "name": null
+      },
+      "cloud_watch_logs_configurations": {
+        "72a98df8-7f1e-45af-89bc-93b648cbef91-phoenix_layer": [
+        ]
+      }
+    },
+    "opsworks_custom_cookbooks": {
+      "enabled": false,
+      "recipes": [
+        "deploy::default",
+        "opsworks_stack_state_sync",
+        "test_suite",
+        "opsworks_cleanup"
+      ]
+    },
+    "chef_environment": "_default",
+    "recipes": [
+      "opsworks_custom_cookbooks::load",
+      "opsworks_custom_cookbooks::execute"
+    ],
+    "opsworks_commons": {
+      "assets_url": "https://opsworks-instance-assets-us-east-1.s3.amazonaws.com"
+    },
+    "opsworks_bundler": {
+      "version": "1.5.3",
+      "manage_package": null
+    },
+    "opsworks_rubygems": {
+      "version": "2.2.2"
+    }
+  },
+  "chef_type": "environment",
+  "json_class": "Chef::Environment"
+}
+

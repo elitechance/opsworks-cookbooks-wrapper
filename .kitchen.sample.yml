@@ -1,0 +1,55 @@
+---
+driver:
+  network:
+    - ["forwarded_port", {guest: 80, host: 3080}]
+  name: vagrant
+  synced_folders:
+    - ['.', '/home/vagrant/hostfiles']
+
+provisioner:
+  name: chef_solo
+  environments_path: environments
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    provisioner:
+      solo_rb:
+        environment: sample
+    run_list:
+      ## Simulate NodeJS Setup
+      - recipe[opsworks-cookbooks-wrapper::default]
+      - recipe[opsworks-cookbooks-wrapper::configure-rubygems]
+      - recipe[opsworks_initial_setup::default]
+      - recipe[mysql::client]
+      - recipe[dependencies]
+      - recipe[ebs]
+      - recipe[opsworks_ganglia::client]
+      - recipe[opsworks_nodejs]
+
+      # We want to skip ssh configurations
+      #- recipe[ssh_host_keys]
+      #- recipe[ssh_users]
+
+      ## Simulate NodeJS Configure
+      #- recipe[opsworks-cookbooks-wrapper::configure-app-config]
+      #- recipe[opsworks_ganglia::configure-client]
+      #- recipe[mysql::client]
+      #- recipe[agent_version]
+      #- recipe[opsworks_nodejs::configure]
+
+      # Skip ssh_user
+      #- recipe[ssh_user]
+
+      ## Simulate NodeJS Deploy
+      #- recipe[deploy::default]
+      #- recipe[opsworks_nodejs::default]
+      #- recipe[deploy::nodejs]
+    attributes:
