@@ -2,7 +2,7 @@
 
 This will help your run opsworks-cookbooks locally using Chef+Kitchen+Vagrant
 
-### To Test, run these commands
+### To Test (Assumptions, you already have [chef](https://downloads.chef.io/chef-client/) and [vagrant](https://www.vagrantup.com/downloads.html) installed)
 --------------------------------
 
 `git clone https://github.com/elitechance/opsworks-cookbooks-wrapper.git`
