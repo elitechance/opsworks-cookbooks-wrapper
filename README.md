@@ -2,7 +2,7 @@
 
 This will help your run opsworks-cookbooks locally using Chef+Kitchen+Vagrant
 
-### To Test (Assumptions, you already have [chef](https://downloads.chef.io/chef-client/) and [vagrant](https://www.vagrantup.com/downloads.html) installed)
+##### To Test (Assumptions, you already have [chef](https://downloads.chef.io/chef-client/) and [vagrant](https://www.vagrantup.com/downloads.html) installed)
 --------------------------------
 
 `git clone https://github.com/elitechance/opsworks-cookbooks-wrapper.git`
@@ -17,14 +17,14 @@ This will help your run opsworks-cookbooks locally using Chef+Kitchen+Vagrant
 
 `cp metadata.sample.rb metadata.rb`
 
-### This will simulate OpsWorks NodeJs Setup Recipes
+##### This will simulate OpsWorks NodeJs Setup Recipes
 `$ chef exec kitchen setup`
 
 
-### Tested In
+#### Tested In
 * Ubuntu 14.04
 
-## KNOWN BUGS
+### KNOWN BUGS
 ----------
 The first time you run `$ chef exec kitchen setup`, you will encounter errors saying:
 
