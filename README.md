@@ -17,7 +17,7 @@ This will help your run opsworks-cookbooks locally using Chef+Kitchen+Vagrant
 
 `cp metadata.sample.rb metadata.rb`
 
-##### This will simulate OpsWorks NodeJs Setup Recipes
+##### This will simulate OpsWorks NodeJs Setup Recipes, see `.kitchen.sample.yml` for details
 `$ chef exec kitchen setup`
 
 
