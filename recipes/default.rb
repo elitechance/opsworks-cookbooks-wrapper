@@ -7,15 +7,15 @@
 include_recipe 'apt'
 
 package 'curl' do
-  action:install
+  action :install
 end
 
 package 'monit' do
-  action:install
+  action :install
 end
 
 package 'g++' do
-  action:install
+  action :install
 end
 
 user 'aws' do
@@ -43,7 +43,7 @@ end
 cookbook_file '/usr/local/bin/create-directories.sh' do
   source 'create-directories.sh'
   mode '0775'
-  action:create
+  action :create
 end
 
 execute 'configure_directories' do
@@ -54,12 +54,12 @@ end
 cookbook_file '/var/lib/aws/opsworks/client.yml' do
   source 'client.yml'
   mode '0664'
-  action:create
+  action :create
 end
 
 cookbook_file '/opt/aws/opsworks/current/bin/downloader.sh' do
   source 'downloader.sh'
   mode '0775'
-  action:create
+  action :create
 end
 
